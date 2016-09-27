@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<title>Basic Emulator</title><!-- not BASIC! -->
+<title>Cage OS</title><!-- not BASIC! -->
 
 <script src="build/libv86.js"></script>
 <script>
@@ -36,13 +36,15 @@ window.onload = function()
 <p>By: Alec Tiefenthal, Jacob Knispel, Peter Larson</p>
 <p>Running in: <a href="https://github.com/copy/v86"> v86 </a> by copy.sh</p>
 <h1><a id="NICK_CAGE_OPERATING_SYSTEM_4"></a>NICK CAGE OPERATING SYSTEM</h1>
-<h4><a id="USAGE_INSTRUCTION_GUIDE_5"></a>USAGE INSTRUCTION GUIDE</h4>
-<h4><a id="BUILD_INSTRUCTIONS_7"></a>BUILD INSTRUCTIONS</h4>
+<br>
+<hr>
+<h2><a id="BUILD_INSTRUCTIONS_7"></a>BUILD INSTRUCTIONS</h2>
 <p>To run our OS on your machine, simply run <a href="https://github.com/peterlarson/cageOS/blob/master/src/compileOS.sh">compileOS.sh</a> and then run <a href="https://github.com/peterlarson/cageOS/blob/master/src/runOS.sh">runOS.sh</a> from the ./m5 directory (these compile and run the OS). Requires the Bochs emulator to run. Exact commands for Linux systems listed below:
 ./compileOS.sh
 ./runOS.sh</p>
 <p>Running the operating system initially runs the shell, which will continuously accept user input. Most commands available for running in the shell run concurrently with each other (up to 8 processes) and will not interfere with one another (although running multiple functions which output to the console may result in jumbled output)</p>
-<h4><a id="LIST_OF_SHELL_COMMANDS_15"></a>LIST OF SHELL COMMANDS</h4>
+<hr>
+<h2><a id="LIST_OF_SHELL_COMMANDS_15"></a>LIST OF SHELL COMMANDS</h2>
 <p>To run a command like "getpids" in the shell, simply type "getpids" and hit ENTER when the terminal looks something like this:
 CAGE&gt; getpids</p>
 <p>In the shell, you can use the following commands, which are all case-insensitive (except for inputs like filenames and the like):</p>
@@ -54,7 +56,7 @@ CAGE&gt; getpids</p>
 fills it with user input. To stop entering input press
 -return- on an enpty line.</p>
 <p><strong>delete</strong> &lt;filename&gt;: deletes the file with the given filename.</p>
-<h2><a id="PROCESS_FUNCTIONS_39"></a>PROCESS FUNCTIONS</h2>
+<h4><a id="PROCESS_FUNCTIONS_39"></a>PROCESS FUNCTIONS</h4>
 <p><strong>execute</strong> &lt;function-in-memory&gt;: Executes the function in memory with the given name as a new process</p>
 <p><strong>execforeground</strong> &lt;function-in-memory&gt;: Executes the function in memory with the given name and forces the calling function (the shell) to wait for that function to finish before continuing</p>
 <p><strong>getpids</strong>: lists the names and pids of processes currently executing</p>
@@ -77,7 +79,7 @@ fills it with user input. To stop entering input press
 <p><strong>quit</strong>: Kills all processes</p>
 <hr>
 <p>(inputting a command not found above will print a picture of Nicolas Cage)</p>
-<h4><a id="KNOWN_BUGS_OR_DEFICIENCIES_87"></a>KNOWN BUGS OR DEFICIENCIES</h4>
+<h2><a id="KNOWN_BUGS_OR_DEFICIENCIES_87"></a>KNOWN BUGS OR DEFICIENCIES</h2>
 <ul>
 <li>
 <p>Upon typing "help" into the console, the user is rejected brutally rather than actually being provided help</p>
@@ -98,7 +100,7 @@ fills it with user input. To stop entering input press
 <p>Killing the "rave" process while it is running will result in the next call to rave failing (it will reset the screen/text color to the way they were before you called rave the first time), since it tries to terminate the rave process that was already terminated manually by kill</p>
 </li>
 </ul>
-<h4><a id="LIST_OF_ADDITIONAL_FEATURES_100"></a>LIST OF ADDITIONAL FEATURES</h4>
+<h2><a id="LIST_OF_ADDITIONAL_FEATURES_100"></a>LIST OF ADDITIONAL FEATURES</h2>
 <ul>
 <li>
 <p>copy allocates the minimum necessary amount of space for the new file</p>
